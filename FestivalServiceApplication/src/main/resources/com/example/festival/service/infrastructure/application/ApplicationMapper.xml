@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.festival.service.infrastructure.application.ApplicationMapper">
+
+    <select id="selectApplication" resultType="com.example.festival.service.domain.model.application.Application">
+        SELECT
+            festival_id AS "festivalId.value"
+        ,   member_id AS "memberId.value"
+        ,   entry_id AS "entryId.value"
+        ,   application_date AS "applicationDate"
+        ,   payment_date AS "payment.paymentDate"
+        ,   use_points AS "payment.usePoints.value"
+        FROM
+            applications
+        WHERE
+            festival_id = #{festivalId.value}
+        AND member_id = #{memberId.value}
+    </select>
+
+    <insert id="insertApplication" parameterType="com.example.festival.service.domain.model.application.Application">
+        INSERT INTO applications (
+            festival_id
+        ,   member_id
+        ,   entry_id
+        ,   application_date
+        ,   payment_date
+        ,   use_points
+        )
+        VALUES (
+            #{festivalId.value}
+        ,   #{memberId.value}
+        ,   #{entryId.value}
+        ,   #{applicationDate}
+        ,   #{payment.paymentDate}
+        ,   #{payment.usePoints.value}
+        )
+    </insert>
+
+    <update id="updateApplication" parameterType="com.example.festival.service.domain.model.application.Application">
+        UPDATE applications
+        SET
+            festival_id = #{festivalId.value}
+        ,   member_id = #{memberId.value}
+        ,   entry_id = #{entryId.value}
+        ,   application_date = #{applicationDate}
+        ,   payment_date = #{payment.paymentDate}
+        ,   use_points = #{payment.usePoints.value}
+        WHERE
+            festival_id = #{festivalId.value}
+        AND member_id = #{memberId.value}
+    </update>
+
+</mapper>

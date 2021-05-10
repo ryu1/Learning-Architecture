@@ -1,0 +1,18 @@
+[submodule "scala-dddbase"]
+	path = scala-dddbase
+	url = https://github.com/sisioh/scala-dddbase
+[submodule "IDDD_Samples"]
+	path = IDDD_Samples
+	url = https://github.com/VaughnVernon/IDDD_Samples
+[submodule "IDDD_Samples_NET"]
+	path = IDDD_Samples_NET
+	url = https://github.com/VaughnVernon/IDDD_Samples_NET
+[submodule "jsf-scrumtoys-refactored"]
+	path = jsf-scrumtoys-refactored
+	url = https://github.com/ryoasai/jsf-scrumtoys-refactored
+[submodule "lokad-iddd-sample"]
+	path = lokad-iddd-sample
+	url = https://github.com/jimitndiaye/lokad-iddd-sample.git
+[submodule "schema-generator"]
+	path = schema-generator
+	url = https://github.com/tricreo/schema-generator

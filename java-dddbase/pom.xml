@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<groupId>org.sisioh</groupId>
+		<artifactId>sisioh-master</artifactId>
+		<version>0.0.1</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>java-dddbase</artifactId>
+	<version>0.0.12</version>
+	<packaging>jar</packaging>
+	<name>Domain-Driven Design Base</name>
+	<repositories>
+		<repository>
+			<snapshots>
+				<checksumPolicy>ignore</checksumPolicy>
+			</snapshots>
+			<id>sisioh-maven-release</id>
+			<name>Sisioh Maven Repository</name>
+			<url>http://maven.sisioh.org/release</url>
+		</repository>
+		<repository>
+			<releases>
+				<updatePolicy>always</updatePolicy>
+			</releases>
+			<id>sisioh-maven-snapshot</id>
+			<name>Sisioh Maven Snapshot Repository</name>
+			<url>http://maven.sisioh.org/snapshot</url>
+		</repository>
+		<repository>
+			<id>mave.tricreo.jp</id>
+			<name>Maven Tricreo Repository Release</name>
+			<url>http://maven.tricreo.jp/release</url>
+		</repository>
+	</repositories>
+	<dependencies>
+		<!-- TEST DEPENDENCIES -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-library</artifactId>
+			<version>1.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>1.8.5</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- LOGGER DEPENDENCIES -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+		<!-- COMMONS DEPENDENCIES -->
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>r09</version>
+		</dependency>
+	</dependencies>
+	<properties>
+		<slf4j.version>1.5.6</slf4j.version>
+		<logback.version>0.9.15</logback.version>
+		<jmockit.version>0.999.4</jmockit.version>
+		<bundle.symbolicName>org.sisioh.dddbase</bundle.symbolicName>
+		<bundle.namespace>org.sisioh.dddbase</bundle.namespace>
+	</properties>
+</project>

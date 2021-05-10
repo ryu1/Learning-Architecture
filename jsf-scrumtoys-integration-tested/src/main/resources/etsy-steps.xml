@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+  <bean id="driverProvider" class="org.jbehave.web.selenium.FirefoxWebDriverProvider" >
+  </bean>
+
+  <bean id="webDriverProvider" class="org.jbehave.web.selenium.PerStoryWebDriverSteps">
+    <constructor-arg ref="driverProvider"/>
+  </bean>
+
+  <bean id="lifecycleSteps" class="jsf2.demo.scrum.steps.LifecycleSteps">
+    <constructor-arg ref="driverProvider"/>
+  </bean>
+
+  <bean id="journaledSteps" class="jsf2.demo.scrum.steps.JournaledStoriesSteps">
+    <constructor-arg ref="driverProvider"/>
+  </bean>
+
+  <bean id="pageFactory" class="jsf2.demo.scrum.pages.PageFactory">
+     <constructor-arg ref="driverProvider"/>
+  </bean>  
+  
+  <bean id="etsySteps" class="jsf2.demo.scrum.steps.EtsyDotComSteps">
+     <constructor-arg ref="pageFactory"/>
+  </bean>  
+
+
+</beans>
