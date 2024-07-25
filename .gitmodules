@@ -16,3 +16,12 @@
 [submodule "schema-generator"]
 	path = schema-generator
 	url = https://github.com/tricreo/schema-generator
+[submodule "isolating-the-domain"]
+	path = isolating-the-domain
+	url = https://github.com/system-sekkei/isolating-the-domain
+[submodule "jr-pricing"]
+	path = jr-pricing
+	url = https://github.com/masuda220/jr-pricing
+[submodule "warikan-domain-java"]
+	path = warikan-domain-java
+	url = https://github.com/j5ik2o/warikan-domain-java
